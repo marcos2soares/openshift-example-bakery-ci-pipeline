@@ -6,7 +6,7 @@ ENV TZ=Europe/Berlin
 ## Install
 USER 0
 ### INSTALL zip, curl, masterpdf
-COPY masterpdf/master-pdf-editor-4.0.10_qt5.amd64.tar.gz .
+COPY ./masterpdf/master-pdf-editor-4.0.10_qt5.amd64.tar.gz .
 RUN apt-get update && apt-get install -y zip curl libqt5svg5 libqt5printsupport5 \
     &&  tar xzsf ./master-pdf-editor-4.0.10_qt5.amd64.tar.gz  -C /headless \
     && ln -s /headless/master-pdf-editor-4/masterpdfeditor4 /usr/bin/masterpdfeditor4 \
