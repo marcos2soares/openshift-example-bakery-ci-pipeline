@@ -6,9 +6,8 @@ ENV TZ=Europe/Berlin
 ## Install
 USER 0
 ### INSTALL zip, curl, masterpdf
-COPY ./masterpdf/master-pdf-editor-4.0.10_qt5.amd64.tar.gz .
 RUN apt-get update && apt-get install -y zip curl libqt5svg5 libqt5printsupport5 \
-    &&  tar xzsf ./master-pdf-editor-4.0.10_qt5.amd64.tar.gz  -C /headless \
+    && wget -qO- https://github.com/marcos2soares/openshift-example-bakery-ci-pipeline/blob/master/masterpdf/master-pdf-editor-4.0.10_qt5.amd64.tar.gz | tar xzs -C /headless \
     && ln -s /headless/master-pdf-editor-4/masterpdfeditor4 /usr/bin/masterpdfeditor4 \
     && mkdir -p $HOME/.config/Code\ Industry \
     && echo "[General]\ncheck_updates=0" >> $HOME/.config/Code\ Industry/Master\ PDF\ Editor.conf \
