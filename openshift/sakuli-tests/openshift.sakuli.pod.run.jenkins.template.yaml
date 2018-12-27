@@ -94,7 +94,7 @@ objects:
       resources:
         limits:
           cpu: 750m
-          memory: 2200Mi
+          memory: 700Mi
 ### Service -> POD config
 - apiVersion: v1
   kind: Service
