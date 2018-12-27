@@ -7,8 +7,8 @@ ENV TZ=Europe/Berlin
 USER 0
 ### INSTALL zip, curl, masterpdf
 RUN apt-get update && apt-get install -y zip curl libqt5svg5 libqt5printsupport5 \
-    && wget -qO- http://get.code-industry.net/public/master-pdf-editor-4.0.10_qt5.amd64.tar.gz | tar xzs -C /headless \
-    && ln -s /headless/master-pdf-editor-4/masterpdfeditor4 /usr/bin/masterpdfeditor4 \
+    && wget -qO- http://get.code-industry.net/public/master-pdf-editor-5.2.20_qt5.amd64.tar.gz | tar xzs -C /headless \
+    && ln -s /headless/master-pdf-editor-5/masterpdfeditor5 /usr/bin/masterpdfeditor4 \
     && mkdir -p $HOME/.config/Code\ Industry \
     && echo "[General]\ncheck_updates=0" >> $HOME/.config/Code\ Industry/Master\ PDF\ Editor.conf \
     && apt-get clean -y
