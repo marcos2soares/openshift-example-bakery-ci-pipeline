@@ -57,7 +57,7 @@ try {
     testCase.endOfStep("rotate to landscap", 30);
 
     //save as pdf
-    screen.find("save_button").highlight().click();
+   /*  screen.find("save_button").highlight().click();
     env.type("a", Key.CTRL) //mark filename in "save under" dialog
         .type(pdfFilePath + Key.ENTER); //type filename and press ENTER
 
@@ -78,7 +78,7 @@ try {
         screen.find(imgPattern).highlight();
     });
     testCase.endOfStep("validate PDF output", 50);
-
+*/
 } catch (e) {
     testCase.handleException(e);
     // env.sleep(9999);
